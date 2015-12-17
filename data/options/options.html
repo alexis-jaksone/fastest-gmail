@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Options - Gmail™ Notifier Plus</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="../icons/16.png">
+    <link rel="stylesheet" type="text/css" href="options.css">
+    <link rel="stylesheet" type="text/css" href="colorpicker/mcColorPicker.css"/>
+  </head>
+  <body class="flex">
+    <div id="header" class="flex">
+      <div style="">
+        <span><a target="_blank" href="http://add0n.com/fastest-gmail.html">Gmail™ Notifier Plus</a></span>
+        <br/>
+        <span class="description">easily check your Gmail Inbox while you browse internet.</span>
+      </div>
+    </div>
+    <div id="content" class="flex">
+      <table width="100%">
+        <tr>
+          <td>Adjust Popup Width and Height</td>
+          <td>
+            <span>Popup width is </span><input data-pref="popup.width" type="number" min="330"></input> <span>px</span>.
+            <p class="note">Minimum popup width is 330px.</p>
+            <p class="spacer"></p>
+            <span>Popup height is </span><input data-pref="popup.height" type="number" min="400"></input> <span>px</span>.
+            <p class="note">Minimum popup height is 400px.</p>
+            <p class="spacer"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>Time Interval to Update the Badge Icon</td>
+          <td>
+            <span>Check Gmail Inbox every </span><input data-pref="interval.time" type="number" min="15"></input><span> seconds</span>.
+            <p class="note">Minimum time interval is 15 seconds.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Open Gmail</td>
+          <td>
+            <span>Open Gmail in (inbox.google.com) </span><input data-pref="gmail.inbox" type="checkbox"></input>
+            <p class="note">Check this box if you want to open Gmail in (inbox.google.com) when clicking on the Gmail button in toolbar-popup.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Add Gmail Labels</td>
+          <td>
+            <span>Enter the name(s) of your Gmail Label(s) that you want to track (for the primary account) </span><input data-pref="gmail.label" type="text"></input>
+            <p class="note">Labels are comma (,) separated. i.e. label1, label2, label3, ...</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Desktop Notifications</td>
+          <td>
+            <span>Check this box if you want to show desktop notification popup for new emails </span><input data-pref="gmail.notification" type="checkbox"></input>
+            <p class="note">The popup will close automatically after few seconds.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Maximum Number of Desktop Notifications</td>
+          <td>
+            <span>Enter the desired maximum number of desktop notifications you want to see </span><input data-pref="gmail.desktopCount" type="number" min="1"></input>
+            <p class="note">The minimum number is 1. If you want to disable Desktop Notifications, see the above option.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Beep-sound for New Emails</td>
+          <td>
+            <span>Check this box if you want to hear a beep sound when a new email arrives </span><input data-pref="gmail.beep" type="checkbox"></input>
+            <p class="note">The beep sound lasts 1 second.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Badge-icon Background Color</td>
+          <td>
+            <span>Pick a color for badge-icon background </span>
+            <input data-pref="badge.color" class="color" readonly='true'></input>
+            <p class="note">Default badge background color is red.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type='text/javascript' src="options.js"></script>
+  </body>
+</html>

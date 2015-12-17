@@ -1,0 +1,21 @@
+{
+  "title": "Gmail™ Notifier Plus",
+  "version": "0.2.0",
+  "name": "fngmail",
+  "id": "jid1-sqmEAwSoa3FZPc@jetpack",
+  "description": "Gmail™ Notifier Plus is the easiest way to check your Gmail inbox while you browse internet.",
+  "lib": "lib",
+  "main": "lib/common.js",
+  "icon": "resource://jid1-sqmEAwSoa3FZPc-at-jetpack/data/icons/32.png",
+  "permissions": {
+    "private-browsing": true,
+    "cross-domain-content": ["https://fonts.gstatic.com/*"]
+  },
+  "preferences": [{
+    "title": "Open Options",
+    "name": "openOptions",
+    "label": "Options",
+    "type": "control",
+    "value": "this is the default string value"
+  }]
+}

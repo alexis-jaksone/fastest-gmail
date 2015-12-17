@@ -1,0 +1,42 @@
+{
+  "name": "Gmail™ Notifier Plus",
+  "short_name": "fnGmail",
+  "manifest_version": 2,
+  "version": "0.2.0",
+  "description": "Gmail™ Notifier Plus is the easiest way to open your Gmail inbox while you browse internet.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webRequest",
+    "notifications",
+    "webRequestBlocking"
+  ],
+  "browser_action": {
+    "default_icon": "data/icons/16.png",
+    "default_title": "Gmail™ Notifier Plus",
+    "default_popup": "data/content_script/panel.html"
+  },
+  "background": {
+    "page": "lib/chrome/background.html"
+  },
+  "options_page": "data/options/options.html",
+  "web_accessible_resources": ["data/content_script/*"],
+  "content_scripts": [{
+    "matches": [
+      "*://*.gstatic.com/*", "*://gstatic.com/*",
+      "*://*.apis.google.com/*", "*://apis.google.com/*",
+      "*://*.mail.google.com/*", "*://mail.google.com/*",
+      "*://*.accounts.google.com/*", "*://accounts.google.com/*"
+    ],
+    "js": ["data/content_script/chrome/chrome.js", "data/content_script/inject.js"],
+    "css": ["data/content_script/inject.css"],
+    "run_at": "document_start",
+    "all_frames": true
+  }],
+  "icons": {
+    "16": "data/icons/16.png",
+    "48": "data/icons/48.png",
+    "128": "data/icons/128.png"
+  }
+}

@@ -1,0 +1,106 @@
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.note, .description {
+  padding: 0;
+  font-size: 85%;
+  margin: 5px 0 0 0;
+}
+.note {
+  color: #333 !important;
+}
+.description {
+  color: white !important;
+}
+.warning {
+  color: #FB8F91;
+}
+.box {
+  width:100%;
+  display: table;
+}
+.box label {
+  width: 1px;
+  padding-right: 5px;
+  white-space: nowrap;
+  display: table-cell;
+}
+.box input, .box select {
+  width: 100%;
+  display: table-cell;
+}
+.spacer {
+  margin: 0;
+  height: 18px;
+}
+.only-firefox {
+  display: none;
+}
+.firefox .only-firefox {
+  display: block;
+}
+body {
+  margin: 0;
+  align-items: center;
+  -webkit-align-items: center;
+}
+body, table {
+  color: #222;
+  font-size: 14px;
+  font-family: arial,sans-serif;
+}
+table {
+  border-spacing: 0 10px;
+}
+a {
+  color: #111;
+  text-decoration: none;
+}
+input {
+  padding: 3px;
+  vertical-align: middle; */
+}
+input[type=number] {
+  width: 80px;
+}
+input[type=text] {
+  width: 100%;
+  margin: 5px 0;
+}
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+input[data-pref='badge.color'],
+input[data-pref='badge.font'] {
+  width: 80px;
+  margin-right: 5px;
+}
+label>input {
+  vertical-align: middle;
+}
+#header {
+  width: 100%;
+  color: white;
+  height: 94px;
+  justify-content: center;
+  -webkit-justify-content: center;
+  border-bottom: solid 5px #E5E5E5;
+  background: #757575 url(../icons/48.png) left 30px center no-repeat;
+}
+#header>div>span {
+  padding-left: 105px;
+}
+#header>div:nth-child(1)>span:nth-child(1) {
+  font-size: 140%;
+}
+#content>table>tbody>tr {
+  background-color: rgba(0,0,0,0.3);
+  outline: solid 4px #E5E5E5;
+}
+#content>table>tbody>tr>td {
+  padding: 20px;
+}
