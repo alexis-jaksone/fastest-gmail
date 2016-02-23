@@ -19,9 +19,9 @@ var self          = require("sdk/self"),
 
 exports.timer = timers;
 exports.Promise = {defer, all};
+exports.manifest = loader.prefixURI;
 exports.loadReason = self.loadReason;
 exports.version = function () {return self.version};
-exports.manifest = "resource://jid1-sqmEAwSoa3FZPc-at-jetpack/fngmail/";
 exports.parser = Cc["@mozilla.org/xmlextras/domparser;1"].createInstance(Ci.nsIDOMParser);
 
 var popup = require("sdk/panel").Panel({
@@ -165,7 +165,7 @@ exports.notification = function (title, text) {
   notifications.notify({
     text: text,
     title: title,
-    iconURL: data.url('icons/32.png'),
+    iconURL: data.url('icons/128.png'),
     onClick: function () {}
   });
 };
@@ -261,7 +261,8 @@ var httpRequestObserver = {
               return false;
             }
             if (start(loadContext)) {
-              var value = 'Mozilla/5.0 (Linux; U; Android 4.4.4; Nexus 5 Build/KTU84P) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30';
+              //var value = 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B) AppleWebkit/537.36 (KHTML, like Gecko) Mobile Safari/537.36';
+              var value = 'Mozilla/5.0 (Android 5.1.1; Mobile; rv:43.0) Gecko/43.0 Firefox/43.0';
               httpChannel.setRequestHeader("User-Agent", value, false);
             }
           }

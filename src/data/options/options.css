@@ -53,7 +53,7 @@ body, table {
   font-family: arial,sans-serif;
 }
 table {
-  border-spacing: 0 10px;
+  border-spacing: 0 15px;
 }
 a {
   color: #111;
@@ -61,7 +61,7 @@ a {
 }
 input {
   padding: 3px;
-  vertical-align: middle; */
+  vertical-align: middle;
 }
 input[type=number] {
   width: 80px;
@@ -89,7 +89,7 @@ label>input {
   justify-content: center;
   -webkit-justify-content: center;
   border-bottom: solid 5px #E5E5E5;
-  background: #757575 url(../icons/48.png) left 30px center no-repeat;
+  background: rgba(0,0,0,0.4) url(../icons/48.png) left 30px center no-repeat;
 }
 #header>div>span {
   padding-left: 105px;
@@ -98,7 +98,7 @@ label>input {
   font-size: 140%;
 }
 #content>table>tbody>tr {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.2);
   outline: solid 4px #E5E5E5;
 }
 #content>table>tbody>tr>td {

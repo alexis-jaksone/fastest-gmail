@@ -33,7 +33,7 @@ function init() {
     /* adding gmail button */
     var tltbt = document.getElementById('tltbt') || document.getElementById('views');
     if (tltbt) {
-      var compose = tltbt.querySelector("div[aria-label='Compose']");
+      var compose = tltbt.querySelector("div[aria-label='Compose']") || tltbt.querySelector("div[aria-label='compose']");
       if (compose) {
         /* find correct element */
         compose = compose.parentNode;
@@ -52,12 +52,34 @@ function init() {
             background.send("open-" + str);
           }, true);
         }
-        styleElement(compose.cloneNode(true), "gmail", "45px");
-        styleElement(compose.cloneNode(true), "home", "129px");
-        styleElement(compose.cloneNode(true), "setting", "87px");
+        styleElement(compose.cloneNode(true), "gmail", "37px");
+        styleElement(compose.cloneNode(true), "home", "105px");
+        styleElement(compose.cloneNode(true), "setting", "71px");
         compose.firstChild.classList.add("extra-compose-class");
       }
+      /* adding reload button */
+      var refresh = tltbt.querySelector("div[aria-label='Refresh']") || tltbt.querySelector("div[aria-label='refresh']");
+      if (refresh) {
+        var reload = refresh.cloneNode(true);
+        refresh.parentNode.appendChild(reload);
+        reload.textContent = "Reload";
+        reload.setAttribute("onclick", '');
+        reload.setAttribute("aria-label", '');
+        reload.setAttribute("class", 'extra-reload-class');
+        /* listener */
+        reload.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          document.location.reload();
+        }, true);
+      }
     }
+    /* set max panel height */
+    background.receive("panel-height", function (height) {
+      var views = document.getElementById('views');
+      if (views) views.style.maxHeight = height + "px";
+    });
+    background.send("panel-height");
     /* remove attach gui */
     window.addEventListener("click", function(e) {
       var attach = document.querySelector('div[aria-label="Attach a file"]') || document.querySelector('div[aria-label="attach a file"]');
@@ -100,10 +122,9 @@ function init() {
 window.addEventListener("load", init, false);
 
 background.receive("reload-ui", function () {
-  if (document) {
+  try {
     /* refresh UI */
-    var refresh = document.querySelector('div[aria-label="Refresh"]') ||
-                  document.querySelector('div[aria-label="refresh"]');
+    var refresh = document.querySelector('div[aria-label="Refresh"]') || document.querySelector('div[aria-label="refresh"]');
     if (refresh) refresh.click();
     /*  */
     var tltbt = document.querySelector('div[id="tltbt"]');
@@ -118,4 +139,5 @@ background.receive("reload-ui", function () {
       }
     }
   }
+  catch (e) {}
 }, false);

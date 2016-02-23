@@ -2,7 +2,7 @@
   "name": "Gmail™ Notifier Plus",
   "short_name": "fnGmail",
   "manifest_version": 2,
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Gmail™ Notifier Plus is the easiest way to open your Gmail inbox while you browse internet.",
   "permissions": [
     "tabs",

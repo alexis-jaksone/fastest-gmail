@@ -1,0 +1,71 @@
+body {
+  display: block !important;
+  visibility: visible !important;
+}
+
+div[id="nav"],
+div[id="blpromo"],
+div[class="Ao  Bo"],
+div[class*="logo-"],
+a[href="javascript:;"],
+div[class="google-footer-bar"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+[role="button"], [role="menuitem"] {
+  cursor: pointer !important;
+}
+
+#views {
+  height: 300%;
+}
+
+.extra-compose-class {
+  border-radius: 2px !important;
+  border-color: #D8382C !important;
+  border: solid 2px #D8382C !important;
+}
+
+.extra-compose-class:nth-child(1) {
+  background-color: #D8382C !important;
+}
+
+.extra-gmail-class {
+  opacity: 80% !important;
+  filter: grayscale(100%) !important;
+  -moz-filter: grayscale(100%) !important;
+  -webkit-filter: grayscale(100%) !important;
+}
+
+.extra-gmail-buttons {
+  border-radius: 2px !important;
+  background-color: #7A7A7A !important;
+  border: solid 2px #7A7A7A !important;
+}
+
+.extra-reload-class {
+  color: #555;
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  cursor: pointer;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  font-style: normal;
+  z-index: 1000000000;
+  font-variant: normal;
+  padding: 7px 4px 5px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.extra-reload-class:hover {
+  color: #333;
+}
+
+div[aria-label="Menu"] {
+  z-index: 1000000000 !important;
+}

@@ -100,6 +100,10 @@ app.popup.receive("load", function () {
   app.popup.send("load", config.gmail.url);
 });
 
+app.popup.receive("panel-height", function () {
+  app.popup.send("panel-height", config.popup.height);
+});
+
 app.popup.receive("gmail-account-inbox", function (url) {
   var flag = [];
   url = url.toLowerCase();
