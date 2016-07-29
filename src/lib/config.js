@@ -73,7 +73,7 @@ config.gmail = {
     app.storage.write("gmail-label", val);
   },
   get url () {
-    return app.storage.read("gmail-url") || "https://mail.google.com/";
+    return app.storage.read("gmail-url") || "https://mail.google.com/mail/mu/";
   },
   set url (val) {
     app.storage.write("gmail-url", val);

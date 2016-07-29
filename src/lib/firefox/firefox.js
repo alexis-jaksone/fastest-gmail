@@ -262,8 +262,8 @@ var httpRequestObserver = {
             }
             if (start(loadContext)) {
               //var value = 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B) AppleWebkit/537.36 (KHTML, like Gecko) Mobile Safari/537.36';
-              var value = 'Mozilla/5.0 (Android 5.1.1; Mobile; rv:43.0) Gecko/43.0 Firefox/43.0';
-              httpChannel.setRequestHeader("User-Agent", value, false);
+              //var value = 'Mozilla/5.0 (Android 5.1.1; Mobile; rv:43.0) Gecko/43.0 Firefox/43.0';
+              //httpChannel.setRequestHeader("User-Agent", value, false);
             }
           }
           catch (e) {}
